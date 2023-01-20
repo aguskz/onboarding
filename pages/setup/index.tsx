@@ -29,9 +29,9 @@ export default function Setup() {
         </p>
         <ul ref={ref} className="w-8/12 max-h-80">
             {tools.map(({name, link}) => 
-            <li className="flex bg-black flex-col justify-between rounded-md border hover:border-yellow-300 focus:border-yellow-300">
+            <li className="flex flex-col justify-between rounded-md  hover:border-yellow-300 focus:border-yellow-300 bg-zinc-800">
                 <div>
-                    <p className="text-white text-xl font-semibold p-3">{name}</p>
+                    <p className="text-white text-xl p-3 text-opacity-60">{name}</p>
                 </div>
                 {link ? <div className="flex justify-end">
                     <a className="flex rounded-md bg-yellow-300 font-mono text-lg px-2 mb-2 mr-2" target="_blank" href={link}>
