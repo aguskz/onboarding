@@ -14,46 +14,51 @@ function useParallax(value: MotionValue<number>, distance: number) {
 }
 
 function Image({
+  key,
   name,
   image,
   title,
   subtitle,
   link,
 }: {
-  id: number
-  name: string
-  image: string
-  title: string
+  key: number
+  name?: string
+  image?: string
+  title?: string
   subtitle: string
-  link: string
+  link?: string
 }) {
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({ target: ref })
   const y = useParallax(scrollYProgress, 300)
 
   return (
-    <section className="mr-80">
-      <div ref={ref} className="bg-black">
-        <img ref={ref} src={image} className="w-auto h-auto" />
-      </div>
-      <motion.h2 style={{ y }}>
-        <div className="ml-20 -mt-20">
-          {name}
-          <p className="tracking-normal mb-2 mt-2 font-bold text-2xl max-w-md">
-            {title}
-          </p>
-          <p className="tracking-normal max-w-md">{subtitle}</p>
-          <div className="flex">
-            <a
-              className="flex rounded-md bg-yellow-300 font-mono text-lg px-2"
-              target="_blank"
-              href={link}
-            >
-              <p className="text-black m-0 p-1 tracking-normal">GitLab</p>
-            </a>
+    <section key={key}>
+      {image ? (
+        <section className="w-6/12 justify-start">
+          <div ref={ref} className="bg-black flex">
+            <img ref={ref} src={image} className="w-auto h-auto" />
           </div>
-        </div>
-      </motion.h2>
+          <motion.h2 style={{ y }} className="-mt-20 flex flex-col -mx-20">
+            {name}
+            <p className="tracking-normal mb-2 mt-2 font-bold text-2xl max-w-md">
+              {title}
+            </p>
+            <p className="tracking-normal max-w-md">{subtitle}</p>
+            <div className="flex">
+              <a
+                className="flex rounded-md bg-yellow-300 font-mono text-lg px-2"
+                target="_blank"
+                href={link}
+              >
+                <p className="text-black m-0 p-1 tracking-normal">GitLab</p>
+              </a>
+            </div>
+          </motion.h2>
+        </section>
+      ) : (
+        <motion.p className="text-2xl mx-20">{subtitle}</motion.p>
+      )}
     </section>
   )
 }
@@ -68,9 +73,9 @@ export default function Parallax() {
 
   return (
     <>
-      {repos.map(({ id, name, image, title, subtitle, link }) => (
+      {repos.map(({ key, name, image, title, subtitle, link }) => (
         <Image
-          id={id}
+          key={key}
           name={name}
           image={image}
           title={title}
