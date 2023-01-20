@@ -1,18 +1,11 @@
 import { useRef } from 'react'
-import { motion, useScroll } from 'framer-motion'
 import Head from 'next/head'
 import { access, additionalAccess } from '../../constants'
 
 export default function Setup() {
   const ref = useRef(null)
-  const { scrollXProgress } = useScroll({ container: ref })
-  const text = 'test'
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <p className="text-2xl mx-60">
         All the documentation related to the project is consolidaded inside
         Notion. Please, consider Notion as the source of truth for requirements,
