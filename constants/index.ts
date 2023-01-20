@@ -56,3 +56,18 @@ export const repos: {id: number, name: string, image: string, title: string, sub
         link: 'https://gitlab.com/reframe-financial/services/marilyn',
     },
 ]
+
+export const tools: {name: string, link: string}[] = [
+    {name: 'Windows Sub Linux (WSL 2.0) and Ubuntu 20.04 LTS Distro', link: 'https://docs.microsoft.com/en-us/windows/wsl/install-win10'},
+    {name: 'Docker Desktop', link: 'https://desktop.docker.com/win/stable/amd64/Docker%20Desktop%20Installer.exe?utm_source=docker&utm_medium=webreferral&utm_campaign=dd-smartbutton&utm_location=header'},
+    {name: 'Git for Windows', link: 'https://github.com/git-for-windows/git/releases/download/v2.32.0.windows.1/Git-2.32.0-64-bit.exe'},
+    {name: 'Postman', link: 'https://www.postman.com/downloads/'},
+    {name: 'PgAdmin 4 v5.', link: 'https://www.pgadmin.org/download/pgadmin-4-windows/'},
+    {name: 'NodeJS', link: 'https://nodejs.org/en/download/'},
+    {name: 'Visual Studio Code', link: 'https://code.visualstudio.com/download'},
+    {name: 'Prettier', link: ''},
+    {name: 'GitLab Workflow', link: ''},
+    {name: 'Remote WSL', link: ''},
+    {name: 'GraphQL', link: ''},
+    {name: 'Remote Containers Docker', link: ''},
+]
