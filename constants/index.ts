@@ -3,9 +3,13 @@ export const repos: {
   name?: string
   image?: string
   title?: string
-  subtitle: string
+  subtitle?: string
   link?: string
 }[] = [
+  {
+    key: 0,
+    title: 'GitLab Repos'
+  },
   {
     key: 1,
     name: 'Wolfgang',

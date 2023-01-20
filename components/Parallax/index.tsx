@@ -13,7 +13,7 @@ function useParallax(value: MotionValue<number>, distance: number) {
   return useTransform(value, [0, 1], [-distance, distance])
 }
 
-function Image({
+function Section({
   key,
   name,
   image,
@@ -25,7 +25,7 @@ function Image({
   name?: string
   image?: string
   title?: string
-  subtitle: string
+  subtitle?: string
   link?: string
 }) {
   const ref = useRef(null)
@@ -56,6 +56,8 @@ function Image({
             </div>
           </motion.h2>
         </section>
+      ) : title ? (
+        <motion.h1 className="text-white">{title}</motion.h1>
       ) : (
         <motion.p className="text-2xl mx-20">{subtitle}</motion.p>
       )}
@@ -74,7 +76,7 @@ export default function Parallax() {
   return (
     <>
       {repos.map(({ key, name, image, title, subtitle, link }) => (
-        <Image
+        <Section
           key={key}
           name={name}
           image={image}
