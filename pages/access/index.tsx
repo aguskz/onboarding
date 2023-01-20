@@ -11,7 +11,7 @@ export default function Setup() {
         Notion. Please, consider Notion as the source of truth for requirements,
         technical specifications, wireframes, shared documents and more.
       </p>
-      <Carousel ref={ref} list={access} linkName={'See more'} />
+      <Carousel list={access} linkName={'See more'} />
       <p className="text-2xl text-white mx-60 mt-10">
         We are more than happy to request access on your behalf and we normally
         do it in that way. But just in case, if access is not granted, please
