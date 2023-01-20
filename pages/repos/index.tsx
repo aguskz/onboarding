@@ -1,6 +1,6 @@
-import { Parallax } from "../../components"
+import { Parallax } from '../../components'
 
 const Repos = () => {
-    return <Parallax />
+  return <Parallax />
 }
 export default Repos

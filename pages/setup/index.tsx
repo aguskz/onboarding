@@ -1,11 +1,11 @@
-import { useRef } from 'react';
-import { motion, useScroll } from 'framer-motion';
-import Head from 'next/head';
-import { tools } from '../../constants';
+import { useRef } from 'react'
+import { motion, useScroll } from 'framer-motion'
+import Head from 'next/head'
+import { tools } from '../../constants'
 
 export default function Setup() {
-  const ref = useRef(null);
-  const { scrollXProgress } = useScroll({ container: ref });
+  const ref = useRef(null)
+  const { scrollXProgress } = useScroll({ container: ref })
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
@@ -50,5 +50,5 @@ export default function Setup() {
         ))}
       </ul>
     </div>
-  );
+  )
 }

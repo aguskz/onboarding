@@ -1,5 +1,3 @@
-import Parallax from "./Parallax";
+import Parallax from './Parallax'
 
-export {
-    Parallax
-}
+export { Parallax }
