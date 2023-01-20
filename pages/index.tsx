@@ -5,7 +5,7 @@ const Home: NextPage = () => {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
       <Head>
-        <title>Create Next App</title>
+        <title>Kz Reframe Onboarding</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -50,12 +50,13 @@ const Home: NextPage = () => {
           </a>
 
           <a
-            href="/setup"
+            href="/diagram.png"
+            download
             className="mt-6 w-96 rounded-xl border p-6 text-left hover:border-yellow-300 focus:border-yellow-300"
           >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
+            <h3 className="text-2xl font-bold">Overview &rarr;</h3>
             <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              Diagram that outlines microservices and how they are related.
             </p>
           </a>
         </div>
