@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { motion, useScroll } from 'framer-motion'
-import Head from 'next/head'
 import { tools } from '../../constants'
+import Carousel from '../../components/Carousel'
 
 export default function Setup() {
   const ref = useRef(null)
@@ -25,26 +25,7 @@ export default function Setup() {
         technical requirements the project demands. Below the list of software
         you need to install:
       </p>
-      <ul ref={ref} className="w-8/12 max-h-80">
-        {tools.map(({ name, link }) => (
-          <li className="flex flex-col justify-between rounded-md  hover:border-yellow-300 focus:border-yellow-300 bg-zinc-900">
-            <div>
-              <p className="text-white text-xl p-3 text-opacity-60">{name}</p>
-            </div>
-            {link ? (
-              <div className="flex justify-end">
-                <a
-                  className="flex rounded-md bg-yellow-300 font-mono text-lg px-2 mb-2 mr-2"
-                  target="_blank"
-                  href={link}
-                >
-                  <p className="text-black m-0 p-1 tracking-normal">Download</p>
-                </a>
-              </div>
-            ) : null}
-          </li>
-        ))}
-      </ul>
+      <Carousel ref={ref} list={tools} linkName={'Download'} />
     </div>
   )
 }
