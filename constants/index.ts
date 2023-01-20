@@ -114,3 +114,21 @@ export const access: { name: string; link?: string }[] = [
     link: 'https://www.notion.so/eApp-Builder-808a67e3df3b4f75a260f2ae7cf7db1f',
   },
 ]
+
+export const additionalAccess: {name: string; link: string; linkName: string }[] = [
+  {
+    name: "It's also recommended to take a look at the Topic of Interests section. You will find technical videos to get started with the technologies used in the project.",
+    link: 'https://kz-rc-onboarding.vercel.app/topics.html',
+    linkName: 'Go to Topics'
+  },
+  {
+    name: "Feel free to get a copy of the scripts we normally use to interact with applications in our local environment.",
+    link: 'https://kz-rc-onboarding.vercel.app/scripts.html',
+    linkName: 'Go to Scripts'
+  },
+  {
+    name: "In order to stay synched with some protocols/practices used by the team, check out the Onboarding Notion docs.",
+    link: 'https://www.notion.so/Onboarding-6a380da66c7b417aa6f734a065cf81ad',
+    linkName: 'Team Practices'
+  }
+]
