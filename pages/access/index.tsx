@@ -17,12 +17,12 @@ export default function Setup() {
       </p>
       <div className="flex w-8/12 justify-between gap-5">
         {additionalAccess.map(({ name, link, linkName }) => (
-          <div className="flex flex-col justify-between rounded-md  hover:border-yellow-300 focus:border-yellow-300 bg-zinc-900">
+          <div className="flex flex-col justify-between rounded-md bg-zinc-900">
             <div>
               <p className="text-white text-xl p-3 text-opacity-60">{name}</p>
             </div>
             {link ? (
-              <div className="flex justify-end">
+              <div className="flex justify-end pr-2 pb-2">
                 <a
                   className="flex rounded-md bg-yellow-300 font-mono text-lg px-2 mb-2 mr-2"
                   target="_blank"
