@@ -51,7 +51,7 @@ export default function Carousel({
                       className="relative max-h-12 w-auto h-auto pl-5"
                       width={50}
                       height={50}
-                      alt="test"
+                      alt={`${name} icon`}
                     />
                   </div>
                 ) : null}
