@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import { motion, useScroll } from 'framer-motion'
+import Image from 'next/image'
 
 export default function Carousel({
   list,
@@ -27,27 +28,50 @@ export default function Carousel({
           />
         </svg>
       )}
-      <ul className="w-8/12 max-h-80" ref={ref}>
-        {list.map(({ name, link }: { name: string; link?: string }) => (
-          <li className="flex flex-col justify-between rounded-md  hover:border-yellow-300 focus:border-yellow-300 bg-zinc-900">
-            <div>
-              <p className="text-white text-xl p-3 text-opacity-60">{name}</p>
-            </div>
-            {link ? (
-              <div className="flex justify-end">
-                <a
-                  className="flex rounded-md bg-yellow-300 font-mono text-lg px-2 mb-2 mr-2"
-                  target="_blank"
-                  href={link}
-                >
-                  <p className="text-black m-0 p-1 tracking-normal">
-                    {linkName}
-                  </p>
-                </a>
+      <ul className="w-8/12 max-h-64" ref={ref}>
+        {list.map(
+          ({
+            name,
+            link,
+            icon,
+          }: {
+            name: string
+            link?: string
+            icon?: string
+          }) => (
+            <li className="flex flex-col rounded-md bg-zinc-900 justify-between">
+              <div className="flex flex-col">
+                <p className="text-white text-xl p-3 text-opacity-60 mb-0">
+                  {name}
+                </p>
+                {icon ? (
+                  <div className="mt-0">
+                    <Image
+                      src={icon}
+                      className="relative max-h-12 w-auto h-auto pl-5"
+                      width={50}
+                      height={50}
+                      alt="test"
+                    />
+                  </div>
+                ) : null}
               </div>
-            ) : null}
-          </li>
-        ))}
+              <div className="flex justify-end pr-2 pb-2">
+                {link ? (
+                  <a
+                    className="flex rounded-md bg-yellow-300 font-mono text-lg px-2 mb-2 mr-2"
+                    target="_blank"
+                    href={link}
+                  >
+                    <p className="text-black m-0 p-1 tracking-normal">
+                      {linkName}
+                    </p>
+                  </a>
+                ) : null}
+              </div>
+            </li>
+          ),
+        )}
       </ul>
     </>
   )

@@ -1,9 +1,7 @@
-import { useRef } from 'react'
 import { access, additionalAccess } from '../../constants'
 import Carousel from '../../components/Carousel'
 
 export default function Setup() {
-  const ref = useRef(null)
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
       <p className="text-2xl mx-60">

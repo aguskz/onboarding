@@ -110,17 +110,27 @@ export const tools: { name: string; link?: string }[] = [
   { name: 'Remote Containers Docker' },
 ]
 
-export const access: { name: string; link?: string }[] = [
-  { name: 'ThreadIt' },
-  { name: 'GitLab' },
-  { name: 'Reframe Financial channels in Slack' },
+export const access: { name: string; link?: string, icon?:string }[] = [
+  { name: 'ThreadIt',
+  icon: '/icons/threadit.webp'
+ },
+  { name: 'GitLab',
+  icon:'/icons/gitlab.png'
+ },
+  { name: 'Reframe Financial channels in Slack',
+  icon: '/icons/slack.png'
+ },
   {
     name: 'Figma',
     link: 'https://www.figma.com/file/xSHspOFeqCETHFOFxQFaXq/eApp-Wireframes?node-id=0%3A1',
+    icon: '/icons/figma.png'
+
   },
   {
     name: 'Notion',
     link: 'https://www.notion.so/eApp-Builder-808a67e3df3b4f75a260f2ae7cf7db1f',
+    icon: '/icons/notion.png'
+
   },
 ]
 
