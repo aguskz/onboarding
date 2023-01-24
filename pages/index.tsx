@@ -2,6 +2,8 @@ import type { NextPage } from 'next'
 import * as React from 'react'
 import { motion } from 'framer-motion'
 
+import { ToggleDarkMode } from '../components'
+
 const container = {
   hidden: { opacity: 1, scale: 0 },
   visible: {
@@ -24,8 +26,8 @@ const item = {
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
-      <div className="flex w-full justify-between items-center">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-white dark:bg-black">
+      <div className="flex w-full justify-between items-center bg-black dark:bg-transparent">
         <img
           src="kaizen.png"
           className="relative max-h-20 w-auto h-auto pl-10"
@@ -36,8 +38,11 @@ const Home: NextPage = () => {
         />
       </div>
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold mb-10">Welcome partner!</h1>
-        <p className="text-2xl">
+        <ToggleDarkMode />
+        <h1 className="text-6xl font-bold mb-10 mt-20 text-black dark:text-white">
+          Welcome partner!
+        </h1>
+        <p className="text-2xl text-black dark:text-white">
           The whole crew is happy to have you on board!
         </p>
         <motion.div
@@ -48,7 +53,7 @@ const Home: NextPage = () => {
         >
           <motion.a
             href="/setup"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:border-yellow-300 focus:border-yellow-300"
+            className="border-black dark:border-white mt-6 w-96 rounded-xl border-2 p-6 text-left hover:border-blue-500 focus:border-blue-500 text-black dark:text-white dark:hover:border-yellow-300 dark:focus:border-yellow-300"
             variants={item}
           >
             <h3 className="text-2xl font-bold">
@@ -61,7 +66,7 @@ const Home: NextPage = () => {
 
           <motion.a
             href="/access"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:border-yellow-300 focus:border-yellow-300"
+            className="border-black dark:border-white mt-6 w-96 rounded-xl border-2 p-6 text-left hover:border-blue-500 focus:border-blue-500 text-black dark:text-white dark:hover:border-yellow-300 dark:focus:border-yellow-300"
             variants={item}
           >
             <h3 className="text-2xl font-bold">Additional access &rarr;</h3>
@@ -73,7 +78,7 @@ const Home: NextPage = () => {
 
           <motion.a
             href="/repos"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:border-yellow-300 focus:border-yellow-300"
+            className="border-black dark:border-white mt-6 w-96 rounded-xl border-2 p-6 text-left hover:border-blue-500 focus:border-blue-500 text-black dark:text-white dark:hover:border-yellow-300 dark:focus:border-yellow-300"
             variants={item}
           >
             <h3 className="text-2xl font-bold">Repositories &rarr;</h3>
@@ -84,7 +89,7 @@ const Home: NextPage = () => {
 
           <motion.a
             href="/overview"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:border-yellow-300 focus:border-yellow-300"
+            className="border-black dark:border-white mt-6 w-96 rounded-xl border-2 p-6 text-left hover:border-blue-500 focus:border-blue-500 text-black dark:text-white dark:hover:border-yellow-300 dark:focus:border-yellow-300"
             variants={item}
           >
             <h3 className="text-2xl font-bold">Overview &rarr;</h3>

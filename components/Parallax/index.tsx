@@ -16,13 +16,13 @@ function Section({
   link?: string
 }) {
   return (
-    <section key={key}>
+    <section key={key} className="bg-white dark:bg-black">
       {image ? (
         <section className="w-6/12 justify-start">
-          <div className="bg-black flex">
+          <div className="bg-white dark:bg-black flex">
             <img src={image} className="w-auto h-auto" />
           </div>
-          <h2 className="-mt-20 flex flex-col -mx-20">
+          <h2 className="-mt-20 flex flex-col -mx-20 text-black dark:text-white">
             {name}
             <p className="tracking-normal mb-2 mt-2 font-bold text-2xl max-w-md">
               {title}
@@ -40,9 +40,11 @@ function Section({
           </h2>
         </section>
       ) : title ? (
-        <motion.h1 className="text-white">{title}</motion.h1>
+        <motion.h1 className="text-black dark:text-white">{title}</motion.h1>
       ) : (
-        <motion.p className="text-2xl mx-20">{subtitle}</motion.p>
+        <motion.p className="text-2xl mx-20 text-black dark:text-white">
+          {subtitle}
+        </motion.p>
       )}
     </section>
   )

@@ -16,7 +16,13 @@ export default function Carousel({
   return (
     <>
       {circle && (
-        <svg id="progress" width="100" height="100" viewBox="0 0 100 100">
+        <svg
+          id="progress"
+          width="100"
+          height="100"
+          viewBox="0 0 100 100"
+          className="stroke-gray-300 dark:stroke-white"
+        >
           <circle cx="50" cy="50" r="30" pathLength="1" className="bg" />
           <motion.circle
             cx="50"
@@ -39,9 +45,9 @@ export default function Carousel({
             link?: string
             icon?: string
           }) => (
-            <li className="flex flex-col rounded-md bg-zinc-900 justify-between">
+            <li className="flex flex-col rounded-md bg-zinc-200 dark:bg-zinc-900 justify-between">
               <div className="flex flex-col">
-                <p className="text-white text-xl p-3 text-opacity-60 mb-0">
+                <p className="text-black dark:text-white text-xl p-3 text-opacity-60 mb-0">
                   {name}
                 </p>
                 {icon ? (

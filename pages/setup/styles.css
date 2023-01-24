@@ -77,12 +77,7 @@ circle {
 }
 
 .bg {
-  stroke: var(--accent);
   opacity: 0.3;
-}
-
-#progress .indicator {
-  stroke: var(--accent);
 }
 
 ul {
@@ -103,7 +98,7 @@ ul {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--accent);
+  background: #d1d5db;
   -webkit-border-radius: 1ex;
 }
 
