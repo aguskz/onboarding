@@ -89,8 +89,7 @@ const Home: NextPage = () => {
           </motion.a>
 
           <motion.a
-            href="/diagram.png"
-            download
+            href="/overview"
             className="mt-6 w-96 rounded-xl border p-6 text-left hover:border-yellow-300 focus:border-yellow-300"
             variants={item}
           >
