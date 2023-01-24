@@ -1,17 +1,4 @@
-import { useRef } from 'react'
-import {
-  motion,
-  useScroll,
-  useSpring,
-  useTransform,
-  MotionValue,
-} from 'framer-motion'
-
-import { repos } from '../../constants'
-
-function useParallax(value: MotionValue<number>, distance: number) {
-  return useTransform(value, [0, 1], [-distance, distance])
-}
+import { motion, useScroll, useSpring } from 'framer-motion'
 
 function Section({
   key,
@@ -28,18 +15,14 @@ function Section({
   subtitle?: string
   link?: string
 }) {
-  const ref = useRef(null)
-  const { scrollYProgress } = useScroll({ target: ref })
-  const y = useParallax(scrollYProgress, 300)
-
   return (
     <section key={key}>
       {image ? (
         <section className="w-6/12 justify-start">
-          <div ref={ref} className="bg-black flex">
-            <img ref={ref} src={image} className="w-auto h-auto" />
+          <div className="bg-black flex">
+            <img src={image} className="w-auto h-auto" />
           </div>
-          <motion.h2 style={{ y }} className="-mt-20 flex flex-col -mx-20">
+          <h2 className="-mt-20 flex flex-col -mx-20">
             {name}
             <p className="tracking-normal mb-2 mt-2 font-bold text-2xl max-w-md">
               {title}
@@ -54,7 +37,7 @@ function Section({
                 <p className="text-black m-0 p-1 tracking-normal">GitLab</p>
               </a>
             </div>
-          </motion.h2>
+          </h2>
         </section>
       ) : title ? (
         <motion.h1 className="text-white">{title}</motion.h1>
@@ -65,7 +48,16 @@ function Section({
   )
 }
 
-export default function Parallax() {
+type Repo = {
+  key: number
+  name?: string
+  image?: string
+  title?: string
+  subtitle?: string
+  link?: string
+}
+
+export default function Parallax({ repos }: { repos: Repo[] }) {
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
