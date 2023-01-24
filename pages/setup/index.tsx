@@ -1,5 +1,5 @@
 import { tools } from '../../constants'
-import Carousel from '../../components/Carousel'
+import { Carousel } from '../../components'
 
 export default function Setup() {
   return (
