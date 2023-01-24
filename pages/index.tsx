@@ -32,13 +32,13 @@ const Home: NextPage = () => {
           src="kaizen.png"
           className="relative max-h-20 w-auto h-auto pl-10"
         />
+        <ToggleDarkMode />
         <img
           src="reframe.svg"
           className="relative max-h-12 w-auto h-auto pr-10"
         />
       </div>
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <ToggleDarkMode />
         <h1 className="text-6xl font-bold mb-10 mt-20 text-black dark:text-white">
           Welcome partner!
         </h1>

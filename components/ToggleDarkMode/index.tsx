@@ -28,7 +28,7 @@ const ToggleDarkMode = () => {
 
   return (
     <div className="flex">
-      <div className="mr-2 text-xs text-black dark:text-white">
+      <div className="mr-2 text-xs text-white">
         <svg
           className="w-6 h-6"
           xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +57,7 @@ const ToggleDarkMode = () => {
           toggle
         </label>
       </div>
-      <div className="text-xs text-black dark:text-white">
+      <div className="text-xs text-white">
         <svg
           className="w-6 h-6"
           xmlns="http://www.w3.org/2000/svg"
