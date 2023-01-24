@@ -8,7 +8,7 @@ export const repos: {
 }[] = [
   {
     key: 0,
-    title: 'GitLab Repos'
+    title: 'GitLab Repos',
   },
   {
     key: 1,
@@ -77,10 +77,16 @@ export const repos: {
     key: 8,
     subtitle: `As a full-stack developer, you will get your hands dirty by touching each application. We believe in the idea of "Sharing Knowledge and every one should know everything" to guarantee the success of the mission. We are accountable!
     Specialists and/or experts in a particular field are welcome, their scope is limited and very specific but still accountable. :)`,
-  }
+  },
 ]
 
-export const tools: { name: string; link?: string }[] = [
+type Tool = {
+  name: string
+  link?: string
+  icon?: string
+}
+
+export const tools: Tool[] = [
   {
     name: 'Windows Sub Linux (WSL 2.0) and Ubuntu 20.04 LTS Distro',
     link: 'https://docs.microsoft.com/en-us/windows/wsl/install-win10',
@@ -88,66 +94,74 @@ export const tools: { name: string; link?: string }[] = [
   {
     name: 'Docker Desktop',
     link: 'https://desktop.docker.com/win/stable/amd64/Docker%20Desktop%20Installer.exe?utm_source=docker&utm_medium=webreferral&utm_campaign=dd-smartbutton&utm_location=header',
+    icon: '/icons/docker.webp',
   },
   {
     name: 'Git for Windows',
     link: 'https://github.com/git-for-windows/git/releases/download/v2.32.0.windows.1/Git-2.32.0-64-bit.exe',
+    icon: '/icons/git.png',
   },
-  { name: 'Postman', link: 'https://www.postman.com/downloads/' },
+  {
+    name: 'Postman',
+    link: 'https://www.postman.com/downloads/',
+    icon: '/icons/postman.png',
+  },
   {
     name: 'PgAdmin 4 v5.',
     link: 'https://www.pgadmin.org/download/pgadmin-4-windows/',
+    icon: '/icons/pgadmin.png',
   },
-  { name: 'NodeJS', link: 'https://nodejs.org/en/download/' },
+  {
+    name: 'NodeJS',
+    link: 'https://nodejs.org/en/download/',
+    icon: '/icons/nodejs.webp',
+  },
   {
     name: 'Visual Studio Code',
     link: 'https://code.visualstudio.com/download',
+    icon: '/icons/vsc.png',
   },
-  { name: 'Prettier' },
+  { name: 'Prettier', icon: '/icons/prettier.svg' },
   { name: 'GitLab Workflow' },
   { name: 'Remote WSL' },
-  { name: 'GraphQL' },
+  { name: 'GraphQL', icon: '/icons/graphql.png' },
   { name: 'Remote Containers Docker' },
 ]
 
-export const access: { name: string; link?: string, icon?:string }[] = [
-  { name: 'ThreadIt',
-  icon: '/icons/threadit.webp'
- },
-  { name: 'GitLab',
-  icon:'/icons/gitlab.png'
- },
-  { name: 'Reframe Financial channels in Slack',
-  icon: '/icons/slack.png'
- },
+export const access: Tool[] = [
+  { name: 'ThreadIt', icon: '/icons/threadit.webp' },
+  { name: 'GitLab', icon: '/icons/gitlab.png' },
+  { name: 'Reframe Financial channels in Slack', icon: '/icons/slack.png' },
   {
     name: 'Figma',
     link: 'https://www.figma.com/file/xSHspOFeqCETHFOFxQFaXq/eApp-Wireframes?node-id=0%3A1',
-    icon: '/icons/figma.png'
-
+    icon: '/icons/figma.png',
   },
   {
     name: 'Notion',
     link: 'https://www.notion.so/eApp-Builder-808a67e3df3b4f75a260f2ae7cf7db1f',
-    icon: '/icons/notion.png'
-
+    icon: '/icons/notion.png',
   },
 ]
 
-export const additionalAccess: {name: string; link: string; linkName: string }[] = [
+export const additionalAccess: {
+  name: string
+  link: string
+  linkName: string
+}[] = [
   {
     name: "It's also recommended to take a look at the Topic of Interests section. You will find technical videos to get started with the technologies used in the project.",
     link: 'https://kz-rc-onboarding.vercel.app/topics.html',
-    linkName: 'Go to Topics'
+    linkName: 'Go to Topics',
   },
   {
-    name: "Feel free to get a copy of the scripts we normally use to interact with applications in our local environment.",
+    name: 'Feel free to get a copy of the scripts we normally use to interact with applications in our local environment.',
     link: 'https://kz-rc-onboarding.vercel.app/scripts.html',
-    linkName: 'Go to Scripts'
+    linkName: 'Go to Scripts',
   },
   {
-    name: "In order to stay synched with some protocols/practices used by the team, check out the Onboarding Notion docs.",
+    name: 'In order to stay synched with some protocols/practices used by the team, check out the Onboarding Notion docs.',
     link: 'https://www.notion.so/Onboarding-6a380da66c7b417aa6f734a065cf81ad',
-    linkName: 'Team Practices'
-  }
+    linkName: 'Team Practices',
+  },
 ]
