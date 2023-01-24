@@ -28,7 +28,7 @@ export default function Carousel({
           />
         </svg>
       )}
-      <ul className="max-h-64" ref={ref}>
+      <ul className="max-h-64 flex-auto" ref={ref}>
         {list.map(
           ({
             name,

@@ -9,7 +9,7 @@ export default function Setup() {
         technical requirements the project demands. Below the list of software
         you need to install:
       </p>
-      <div className="mx-60">
+      <div className="flex w-full px-60">
         <Carousel list={tools} linkName={'Download'} circle />
       </div>
     </div>
