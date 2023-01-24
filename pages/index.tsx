@@ -33,12 +33,12 @@ const Home: NextPage = () => {
         }}
       >
         <img
-          src="kaizen.png"
-          className="relative max-h-20 w-auto h-auto pl-5"
+          src="reframe.svg"
+          className="relative max-h-12 w-auto h-auto pl-5"
         />
         <img
-          src="reframe.svg"
-          className="relative max-h-12 w-auto h-auto pl-10"
+          src="kaizen.png"
+          className="relative max-h-20 w-auto h-auto pl-10"
         />
       </div>
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
