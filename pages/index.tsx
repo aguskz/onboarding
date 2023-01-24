@@ -25,20 +25,14 @@ const item = {
 const Home: NextPage = () => {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
-      <div
-        style={{
-          display: 'flex',
-          width: '100%',
-          alignItems: 'center',
-        }}
-      >
-        <img
-          src="reframe.svg"
-          className="relative max-h-12 w-auto h-auto pl-5"
-        />
+      <div className="flex w-full justify-between items-center">
         <img
           src="kaizen.png"
           className="relative max-h-20 w-auto h-auto pl-10"
+        />
+        <img
+          src="reframe.svg"
+          className="relative max-h-12 w-auto h-auto pr-10"
         />
       </div>
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
