@@ -13,7 +13,7 @@ body {
   --yellow: #ffbb00;
 
   --background: var(--black);
-  --accent: var(--black);
+  --accent: var(--white);
 
   margin: 0;
   padding: 0;
@@ -177,6 +177,5 @@ img {
   left: 0;
   right: 0;
   height: 5px;
-  background: var(--accent);
   bottom: 100px;
 }

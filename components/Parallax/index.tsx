@@ -79,7 +79,10 @@ export default function Parallax({ repos }: { repos: Repo[] }) {
           link={link}
         />
       ))}
-      <motion.div className="progress" style={{ scaleX }} />
+      <motion.div
+        className="progress bg-black dark:bg-white"
+        style={{ scaleX }}
+      />
     </>
   )
 }
