@@ -1,5 +1,5 @@
 import { Parallax } from '../../components'
-import { repos } from '../../constants'
+import { Repo } from '../../types'
 
 export async function getServerSideProps() {
   let projects: Array<any> = []
@@ -12,7 +12,19 @@ export async function getServerSideProps() {
     )
     const [{ projects: projectsFront }, { projects: projectsBack }] =
       await Promise.all([front.json(), back.json()])
-    projects = [...projectsFront, ...projectsBack]
+    projects = [
+      {
+        id: 0,
+        title: 'GitLab Repos',
+      },
+      ...projectsFront,
+      ...projectsBack,
+      {
+        id: -1,
+        description: `As a full-stack developer, you will get your hands dirty by touching each application. We believe in the idea of "Sharing Knowledge and every one should know everything" to guarantee the success of the mission. We are accountable!
+    Specialists and/or experts in a particular field are welcome, their scope is limited and very specific but still accountable. :)`,
+      },
+    ]
   } catch (err) {
     console.error(err)
   } finally {
@@ -24,8 +36,7 @@ export async function getServerSideProps() {
   }
 }
 
-const Repos = (/*{ projects }: { projects?: any }*/) => {
-  // const { name, web_url, avatar_url } = projects
-  return <Parallax repos={repos} />
+const Repos = ({ projects }: { projects: Repo[] }) => {
+  return <Parallax repos={projects} />
 }
 export default Repos

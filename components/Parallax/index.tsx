@@ -1,4 +1,5 @@
 import { motion, useScroll, useSpring } from 'framer-motion'
+import { Repo } from '../../types'
 
 function Section({
   key,
@@ -50,15 +51,6 @@ function Section({
   )
 }
 
-type Repo = {
-  key: number
-  name?: string
-  image?: string
-  title?: string
-  subtitle?: string
-  link?: string
-}
-
 export default function Parallax({ repos }: { repos: Repo[] }) {
   const { scrollYProgress } = useScroll()
   const scaleX = useSpring(scrollYProgress, {
@@ -69,14 +61,14 @@ export default function Parallax({ repos }: { repos: Repo[] }) {
 
   return (
     <>
-      {repos.map(({ key, name, image, title, subtitle, link }) => (
+      {repos.map(({ id, name, avatar_url, title, description, web_url }) => (
         <Section
-          key={key}
+          key={id}
           name={name}
-          image={image}
+          image={avatar_url}
           title={title}
-          subtitle={subtitle}
-          link={link}
+          subtitle={description}
+          link={web_url}
         />
       ))}
       <motion.div
