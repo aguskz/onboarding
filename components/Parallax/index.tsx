@@ -19,16 +19,16 @@ function Section({
   return (
     <section key={key} className="bg-white dark:bg-black">
       {image ? (
-        <section className="w-6/12 justify-start">
-          <div className="bg-white dark:bg-black flex">
+        <section className="w-full justify-center">
+          <div className="bg-white dark:bg-black flex mr-20">
             <img src={image} className="w-auto h-auto" />
           </div>
-          <h2 className="-mt-20 flex flex-col -mx-20 text-black dark:text-white">
+          <h2 className="-mt-20 flex flex-col text-black dark:text-white">
             {name}
             <p className="tracking-normal mb-2 mt-2 font-bold text-2xl max-w-md">
               {title}
             </p>
-            <p className="tracking-normal max-w-md">{subtitle}</p>
+            <p className="tracking-normal max-w-md pr-5">{subtitle}</p>
             <div className="flex">
               <a
                 className="flex rounded-md bg-yellow-300 font-mono text-lg px-2"
@@ -41,7 +41,9 @@ function Section({
           </h2>
         </section>
       ) : title ? (
-        <motion.h1 className="text-black dark:text-white">{title}</motion.h1>
+        <div className="bg-white dark:bg-black w-full">
+          <motion.h1 className="text-black dark:text-white">{title}</motion.h1>
+        </div>
       ) : (
         <motion.p className="text-2xl mx-20 text-black dark:text-white">
           {subtitle}
