@@ -144,15 +144,19 @@ const subTags = Object.values(Tags).filter((x) => !mainTags.includes(x))
 const Topics = () => {
   const [selected, setSelected] = useState<Tags[]>([Tags.FRONT])
   const onTagClick = (tag: Tags) => {
-    setSelected((_selected) => {
-      const copy = [..._selected]
-      if (copy.indexOf(tag) === -1) {
-        copy.push(tag)
-      } else {
-        copy.splice(copy.indexOf(tag), 1)
-      }
-      return copy
-    })
+    if (mainTags.includes(tag)) {
+      setSelected([tag])
+    } else {
+      setSelected((_selected) => {
+        const copy = [..._selected]
+        if (copy.indexOf(tag) === -1) {
+          copy.push(tag)
+        } else {
+          copy.splice(copy.indexOf(tag), 1)
+        }
+        return copy
+      })
+    }
   }
 
   return (
