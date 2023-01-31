@@ -151,7 +151,7 @@ export const additionalAccess: {
 }[] = [
   {
     name: "It's also recommended to take a look at the Topic of Interests section. You will find technical videos to get started with the technologies used in the project.",
-    link: 'https://kz-rc-onboarding.vercel.app/topics.html',
+    link: '/topics',
     linkName: 'Go to Topics',
   },
   {

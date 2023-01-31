@@ -27,7 +27,7 @@ export default function Setup() {
               <div className="flex justify-end pr-2 pb-2">
                 <a
                   className="flex rounded-md bg-yellow-300 font-mono text-lg px-2 mb-2 mr-2"
-                  target="_blank"
+                  target={link.startsWith('/') ? undefined : '_blank'}
                   href={link}
                 >
                   <p className="text-black m-0 p-1 tracking-normal">
